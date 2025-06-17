@@ -1,6 +1,7 @@
 package com.devsuperior.dsCommerce.dto;
 
-import jakarta.persistence.Column;
+
+import com.devsuperior.dsCommerce.entities.Product;
 
 public class ProductDTO {
 
@@ -10,7 +11,8 @@ public class ProductDTO {
     private Double price;
     private String imgUrl;
 
-    public ProductDTO(){}
+    public ProductDTO() {
+    }
 
     public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
         this.id = id;
@@ -18,6 +20,14 @@ public class ProductDTO {
         this.description = description;
         this.price = price;
         this.imgUrl = imgUrl;
+    }
+
+    public ProductDTO(Product entity) {
+        id = entity.getId();
+        name = entity.getName();
+        description = entity.getDescription();
+        price = entity.getPrice();
+        imgUrl = entity.getImgUrl();
     }
 
     public Long getId() {
