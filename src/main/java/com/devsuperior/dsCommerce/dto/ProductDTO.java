@@ -1,6 +1,4 @@
 package com.devsuperior.dsCommerce.dto;
-
-
 import com.devsuperior.dsCommerce.entities.Product;
 
 public class ProductDTO {
